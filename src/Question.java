@@ -1,0 +1,13 @@
+import java.util.Random;
+public class Question {
+	Random rand = new Random();
+	Answers ask()  {
+		int prob = (int)(100*rand.nextDouble());
+		if(prob<15) return Answers.MAYBE;
+		if(prob<30) return Answers.NO;
+		if(prob<60) return Answers.YES;
+		if(prob<75) return Answers.LATER;
+		if(prob<98) return Answers.SOON;
+		else return Answers.NEVER;
+	}
+}
